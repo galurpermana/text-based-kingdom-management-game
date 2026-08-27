@@ -1,9 +1,36 @@
-# ARANDOR — Kingdom Chronicle
+ARANDOR — Kingdom Chronicle
+===
 
-A browser-based text kingdom-management sim. You rule a kingdom through a
-terminal-style command line, backed by an always-visible dashboard and side
-panel, and a deterministic yearly simulation (economy, population, tech,
-diplomacy, war).
+A fully client-side, vanilla JavaScript kingdom-management
+simulation where you rule a medieval realm through commands,
+manage provinces, build infrastructure, conduct diplomacy,
+research technology, wage wars, and shape your kingdom's history.
+
+Features
+---
+
+✓ Deterministic simulation <br>
+✓ Province management<br>
+✓ Economy & taxation<br>
+✓ Population simulation<br>
+✓ Technology tree<br>
+✓ Royal court<br>
+✓ Military & warfare<br>
+✓ Diplomacy & alliances<br>
+✓ Dynamic events<br>
+✓ Historical chronicle<br>
+✓ Save/load<br>
+✓ JSON export/import<br>
+✓ Terminal-style interface<br>
+✓ No framework<br>
+✓ No backend<br>
+✓ No build step<br>
+Tech Stack<br>
+---
+
+HTML5
+CSS3
+Vanilla JavaScript
 
 ![Project Screenshot](Screenshot.png)
 
