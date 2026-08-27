@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ARANDOR — Kingdom Chronicle</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div id="dash">
+  <div id="dashTop">
+    <span class="title crest" id="kName">THE KINGDOM</span>
+    <span class="sub" id="rulerLine">—</span>
+    <span class="sub" id="yearLine">—</span>
+    <button class="qbtn" id="panelToggle">☰ info</button>
+  </div>
+  <div id="dashGrid"></div>
+</div>
+
+<div id="mainRow">
+  <div id="leftCol">
+    <div id="terminalWrap">
+      <div id="terminal" role="log" aria-live="polite" aria-atomic="false"></div>
+      <button id="jumpBtn">↓ New activity</button>
+    </div>
+
+    <div id="inputRow">
+      <div id="quickRow">
+        <button class="qbtn" data-cmd="help">help</button>
+        <button class="qbtn" data-cmd="kingdom">kingdom</button>
+        <button class="qbtn" data-cmd="economy">economy</button>
+        <button class="qbtn" data-cmd="history">history</button>
+        <button class="qbtn" data-cmd="advance">advance year ▸</button>
+      </div>
+      <div id="suggestBox"></div>
+      <div id="inputLine">
+        <span id="prompt">&gt;</span>
+        <input id="cmdInput" type="text" autocomplete="off" placeholder="type a command… (try 'help')" aria-label="Command input" />
+      </div>
+    </div>
+  </div>
+
+  <div id="sideBackdrop"></div>
+  <div id="sidePanel">
+    <div id="sideHeader">
+      <span class="crest">REALM AT A GLANCE</span>
+      <button class="qbtn" id="sideClose">✕</button>
+    </div>
+    <div id="sideTabs"></div>
+    <div id="sideContent"></div>
+  </div>
+</div>
+<input type="file" id="importFile" accept=".json,application/json" style="display:none">
+
+<!--
+  Load order matters: these are classic (non-module) scripts, so every
+  top-level `function`/`const` becomes global as soon as its file runs.
+  Files are numbered in dependency order — data/state before anything
+  that reads it, engine before commands that call it, bootstrap last
+  since it touches the DOM and starts the game.
+-->
+<script src="js/01-rng.js"></script>
+<script src="js/02-data.js"></script>
+<script src="js/03-tech.js"></script>
+<script src="js/04-state.js"></script>
+<script src="js/05-render-dashboard.js"></script>
+<script src="js/06-render-sidepanel.js"></script>
+<script src="js/07-engine.js"></script>
+<script src="js/08-view-commands.js"></script>
+<script src="js/09-persistence.js"></script>
+<script src="js/10-commands.js"></script>
+<script src="js/11-ux-helpers.js"></script>
+<script src="js/12-bootstrap.js"></script>
+</body>
+</html>
