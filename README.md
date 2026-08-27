@@ -5,7 +5,7 @@ terminal-style command line, backed by an always-visible dashboard and side
 panel, and a deterministic yearly simulation (economy, population, tech,
 diplomacy, war).
 
-![Project Screenshot](screenshot.png)
+![Project Screenshot](Screenshot.png)
 
 ## Running it
 
